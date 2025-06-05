@@ -1,7 +1,5 @@
-
 import React from 'react';
 import './Login.css';
-import { Link } from 'react-router-dom';
 
 export default function AuthPage() {
   return (
@@ -17,7 +15,7 @@ export default function AuthPage() {
           <button type="submit">Login</button>
         </form>
         <div className="auth-links">
-          <Link to="/signup">Create an Account</Link>
+          <a href="/signup">Create an Account</a>
         </div>
       </div>
       <footer className="auth-footer">
