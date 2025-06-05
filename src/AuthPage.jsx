@@ -1,25 +1,30 @@
 
 import React from 'react';
 import './Login.css';
+import { Link } from 'react-router-dom';
 
 export default function AuthPage() {
   return (
-    <div className="login-container">
-      <div className="logo-wrapper">
-        <img src="/logo.png" alt="LeadNest Logo" className="circle-logo" />
+    <div className="auth-page">
+      <div className="auth-logo">
+        <img src="/logo.png" alt="LeadNest Logo" />
       </div>
-      <div className="login-hero">
-        <h1 className="headline">Work Less. Close More.</h1>
-        <p className="subhead">Your AI-powered real estate assistant.</p>
+      <div className="auth-box">
+        <h2>Welcome Back</h2>
+        <form>
+          <input type="email" placeholder="Email" required />
+          <input type="password" placeholder="Password" required />
+          <button type="submit">Login</button>
+        </form>
+        <div className="auth-links">
+          <Link to="/signup">Create an Account</Link>
+        </div>
       </div>
-      <form className="login-form">
-        <input type="email" placeholder="Email" required />
-        <input type="password" placeholder="Password" required />
-        <button type="submit">Log In</button>
-        <p className="create-account">
-          Don’t have an account? <a href="#">Create one</a>
-        </p>
-      </form>
+      <footer className="auth-footer">
+        <a href="/terms">Terms of Service</a>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/contact">Contact Us</a>
+      </footer>
     </div>
   );
 }
